@@ -1,9 +1,6 @@
 package fr.p10.miage.rps.model;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
 import static fr.p10.miage.rps.model.Result.TIE;
@@ -59,5 +56,83 @@ public class RockPaperScissorsTest {
     public void testLostPlay(String p1, String p2) throws Exception{
         assertEquals(rps.play(RPSEnum.valueOf(p1), RPSEnum.valueOf(p2)),LOST);
     }
+
+    /*DATAPROVIDER*/
+    /*en dur*/
+   /* @DataProvider(name="winData")
+    public Object[ ][ ] createWinData() {
+        return new Object[][] {
+                {"paper", "rock"},
+                {"scissors", "paper"},
+                {"rock", "scissors"}
+        } ;
+    }
+
+    @DataProvider(name="lostData")
+    public Object[ ][ ] createLostData() {
+        return new Object[][] {
+                {"rock", "paper"},
+                {"paper", "scissors"},
+                {"scissors", "rock"}
+        } ;
+    }
+
+    @DataProvider(name="tieData")
+    public Object[ ][ ] createTieData() {
+        return new Object[][] {
+                {"rock", "rock"},
+                {"scissors", "scissors"},
+                {"paper", "paper"}
+        } ;
+    }*/
+
+   /*en paramétré */
+    /*CREATION DU DATA¨PROVIDER*/
+    @DataProvider(name="winData")
+    public Object[ ][ ] createWinData() {
+        return new Object[][] {
+                {RPSEnum.PAPER, RPSEnum.ROCK },
+                {RPSEnum.SCISSORS,RPSEnum.PAPER},
+                {RPSEnum.ROCK,RPSEnum.SCISSORS}
+        } ;
+    }
+
+    @DataProvider(name="lostData")
+    public Object[ ][ ] createLostData() {
+        return new Object[][] {
+                {RPSEnum.ROCK,RPSEnum.PAPER},
+                {RPSEnum.PAPER,RPSEnum.SCISSORS},
+                {RPSEnum.SCISSORS, RPSEnum.ROCK}
+        } ;
+    }
+
+    @DataProvider(name="tieData")
+    public Object[ ][ ] createTieData() {
+        return new Object[][] {
+                {RPSEnum.ROCK,RPSEnum.ROCK},
+                {RPSEnum.SCISSORS,RPSEnum.SCISSORS},
+                {RPSEnum.PAPER,RPSEnum.PAPER}
+        } ;
+    }
+
+    /*APPEL DU DATAPROVIDER*/
+    @Test(dataProvider = "winData")
+    void testWinPlayDataProvider ( RPSEnum p1 , RPSEnum p2 ) {
+        assertEquals(rps.play(p1,p2),WIN);
+
+    }
+
+    @Test(dataProvider = "lostData")
+    void testLostPlayDataProvider ( RPSEnum p1 , RPSEnum p2 ) {
+        assertEquals(rps.play(p1,p2),LOST);
+
+    }
+
+    @Test(dataProvider = "tieData")
+    void testTiePlayDataProvider ( RPSEnum p1 , RPSEnum p2 ) {
+        assertEquals(rps.play(p1,p2),TIE);
+
+    }
+
 
 }

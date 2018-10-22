@@ -1,0 +1,97 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: RockPaperScissors</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">fr.p10.miage.rps.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: RockPaperScissors (fr.p10.miage.rps.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RockPaperScissors</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package fr.p10.miage.rps.model;
+<i>2</i>&nbsp;
+<b class="fc"><i>3</i>&nbsp;public class RockPaperScissors{//générer des tests il faut alt + entrée puis create test et créer un dossier test dans au même niveau que src et</b>
+<i>4</i>&nbsp;    //ensuite mark directory as test
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;    Result play(RPSEnum p1, RPSEnum p2) {
+<b class="fc"><i>7</i>&nbsp;        if (p1.equals(p2))</b>
+<i>8</i>&nbsp;            return Result.TIE;
+<i>9</i>&nbsp;        if (p1.equals(RPSEnum.PAPER) &amp;&amp; p2.equals(RPSEnum.ROCK))
+<i>10</i>&nbsp;            return Result.WIN;
+<i>11</i>&nbsp;        else
+<i>12</i>&nbsp;            return Result.LOST;
+<i>13</i>&nbsp;    }
+<i>14</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-10-22 16:20</div>
+</div>
+</body>
+</html>
