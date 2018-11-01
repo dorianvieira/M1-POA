@@ -14,8 +14,14 @@ public abstract class Enseignant extends Personnel {
         super(nom, prenom, numSecu);
     }
 
+    public double getSalaire() {
+        return salaire;
+    }
+
 
     public String toString() {
-        return ("");
+
+        return ("Je suis le professeur " + getNom() + getPrenom() + " mon numéro de sécurité sociale est le: "+ getNumSecu()
+        + "j'ai été recruté le + " + dateRecrutement + "je touche un salaire de "+ getSalaire());
     }
 }

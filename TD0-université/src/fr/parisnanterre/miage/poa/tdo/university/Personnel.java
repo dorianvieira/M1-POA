@@ -42,7 +42,8 @@ public abstract class Personnel {
     }
     */
 
+    /*Ce toString sera utilisé par les classes filles*/
     public String toString() {
-        return super.toString();
+        return ("Je suis " + getNom() + getPrenom() +"/n" + "Mon numéro de sécurité sociale: " + getNumSecu());
     }
 }

@@ -9,6 +9,7 @@ public class Doctorant extends Etudiant {
 
 
     public String toString() {
-        return ("salut "+ getNom() + getPrenom() + "num: " + getNumSecu() + "echelon "+ getEchelonBourse());
+        //on utilise le toString de Etudiant
+        return super.toString(); /*("salut "+ getNom() + getPrenom() + "num: " + getNumSecu() + "echelon "+ getEchelonBourse());*/
     }
 }
