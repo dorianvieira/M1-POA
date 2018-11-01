@@ -1,4 +1,4 @@
-package fr.parisnanterre.miage.poa.tdo.university;
+package fr.parisnanterre.miage.poa.tdo.university.implem;
 
 /*si on met pas abstract ca veut dire on peut avoir un personnel de type personnel or c'est pas ce qu'on veut*/
 public abstract class Personnel {

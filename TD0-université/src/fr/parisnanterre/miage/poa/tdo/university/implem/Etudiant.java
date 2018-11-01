@@ -1,7 +1,5 @@
 package fr.parisnanterre.miage.poa.tdo.university.implem;
 
-import fr.parisnanterre.miage.poa.tdo.university.Personnel;
-
 public class Etudiant extends Personnel {
 
     private double echelonBourse;

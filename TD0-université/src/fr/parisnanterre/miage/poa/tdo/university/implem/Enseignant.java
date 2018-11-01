@@ -1,7 +1,5 @@
 package fr.parisnanterre.miage.poa.tdo.university.implem;
 
-import fr.parisnanterre.miage.poa.tdo.university.Personnel;
-
 import java.util.Date;
 
 public abstract class Enseignant extends Personnel {
@@ -12,6 +10,10 @@ public abstract class Enseignant extends Personnel {
 
     public Enseignant (Date dateRecrutement, double salaire, String nom, String prenom, String numSecu) {
         super(nom, prenom, numSecu);
+        this.salaire=salaire;
+        this.dateRecrutement=dateRecrutement;
+
+        dateRecrutement = new Date();
     }
 
     public double getSalaire() {

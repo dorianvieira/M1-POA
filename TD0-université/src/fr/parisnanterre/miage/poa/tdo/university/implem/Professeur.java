@@ -7,4 +7,8 @@ public class Professeur extends Enseignant {
     public Professeur(Date dateRecrutement, double salaire, String nom, String prenom, String numSecu) {
         super(dateRecrutement, salaire, nom, prenom, numSecu);
     }
+
+    public String toString() {
+        return super.toString();
+    }
 }
