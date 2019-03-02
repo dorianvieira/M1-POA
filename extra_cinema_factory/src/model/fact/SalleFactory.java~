@@ -1,0 +1,15 @@
+package model.factory;
+
+import model.declaration.CinemaItf;
+import model.implementation.SalleCinema;
+
+/*class de creation de la salle */
+public final class SalleFactory
+{
+	
+	public static final SalleFactory INSTANCE = new SalleFactory();
+	public SalleCinema createSalleCinema(String filmProjete, double prix, int nbPlaces)
+	{
+		return new SalleCinema(filmProjete,prix,nbPlaces);
+	}
+}
